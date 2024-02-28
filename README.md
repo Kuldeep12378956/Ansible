@@ -126,19 +126,54 @@ This command will remove the user
 
 # Ansible Playbook- The playbook 
 
+Play book can help us to automate multiple task and the main benifit of it is that it doesn't repeat the tasks as like Adhoc commands, 
+
+Below playbook will install apache service, enable it, remove the previos index.html file, create the new one, and add the content inside the file. 
+
+## These are the few important command to be remembered. 
+1. Create a Directory to store the playbook. any where in file system.
+2. create the playbook with yml format
+3. once done. test that playbook for syntax error with dryrun option {ansible-playbook apache-install.yml -C}
+4. Finally run the playbook. by command {ansible-playbook apache-install.yml }
 
 
 
+### Ansible Playbook Example - 
 
+---
+- name: install and configure Apache
+  hosts: webservers
+  become: yes
+  become_user: root
 
+  tasks:
+   - name: install Apache
+     apt:
+       name: apache2
+       state: latest
+       update_cache: yes
+   - name: Enable service and start service
+     service:
+       name: apache2
+       enabled: yes
+       state: started
+   - name: remove the existing index.html
+     file:
+        path: /var/www/html/index.html
+        state: absent
+   - name: Create new index.html path
+     file:
+        path: /var/www/html/index.html
+        state: touch
+        owner: root
+        group: root
+        mode: 0755
+   - name: Add content in index.html file
+     lineinfile:
+        path: /var/www/html/index.html
+        line: Hello Anisble World!
 
-
-
-
-
-
-
-
+        
 
 
 
