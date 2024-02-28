@@ -3,13 +3,17 @@
 ## Prerequesties - 
 ### 1. Atleast 2 Server (Ec2 Instance)
 Control Node- Need to install Ansible in it
+    ```
     `apt install absible -y'
-Managed Node - Need to install Python in it 
+    ```
+Managed Node - Need to install Python in it
+    ```
     'apt install python3 -y'
-
+    ```
 ### 2. Enable password less Authentication between them. 
    Genrate SSH keys in both (Control Node & Managed Node)= 
-            (#ssh-keygen)
+            
+            ```ssh-keygen```
    Save the public key of Contriol node into Managed Node Autharization_keys file.    
 
 
