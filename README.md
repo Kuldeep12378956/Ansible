@@ -30,7 +30,7 @@ There are multiple modules, Ansible keep creating new Modules. Few of the very f
 
 
 
-### Adhoc Commands- using Various Modules
+# Adhoc Commands- using Various Modules
 Adhoc Command are used when there are minor Work Need to be done and writing playbook is not good thing to do it. 
 
 # Ping Module
