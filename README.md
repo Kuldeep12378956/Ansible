@@ -139,7 +139,7 @@ Below playbook will install apache service, enable it, remove the previos index.
 
 
 ### Ansible Playbook Example - 
-
+```
 ---
 - name: install and configure Apache
   hosts: webservers
@@ -173,8 +173,8 @@ Below playbook will install apache service, enable it, remove the previos index.
         path: /var/www/html/index.html
         line: Hello Anisble World!
 
-        
-
+ 
+```
 
 
 
