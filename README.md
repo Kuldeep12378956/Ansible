@@ -1,4 +1,4 @@
-# Ansible
+## Ansible
 
 # Prerequesties - 
 # 1. Atleast 2 Server (Ec2 Instance)
@@ -13,7 +13,7 @@
 
 > [!NOTE]
 > Make sure to give appropriate permission to public file
-______________________________________________________________________________________________________________________-
+_________________________________________________________
  
 
 # Adhoc Commands- 
