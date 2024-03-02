@@ -149,9 +149,10 @@ Below playbook will install apache service, enable it, remove the previos index.
 3. once done. test that playbook for syntax error with dryrun option {ansible-playbook apache-install.yml -C}
 4. Finally run the playbook. by command {ansible-playbook apache-install.yml }
 
-
-
 ### Ansible Playbook Example - 
+
+
+
 ```
 ---
 - name: install and configure Apache
@@ -186,6 +187,8 @@ Below playbook will install apache service, enable it, remove the previos index.
         path: /var/www/html/index.html
         line: Hello Anisble World!
 ```
+
+**************************************************************************
 
 
 
